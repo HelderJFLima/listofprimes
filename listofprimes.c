@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 
 	if(plist == NULL)
 	{
-		perror("\listofprimes->calloc");				/* Error message */
+		perror("\nlistofprimes->calloc");				/* Error message */
 
 		return 4;
 	}
@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
 
 	if(file == NULL)
 	{
-		perror("\listofprimes->fopen");
+		perror("\nlistofprimes->fopen");
 
 		free(plist);
 
@@ -181,14 +181,14 @@ char* getfilename(char *firstpart, unsigned long number, char *extension)
 
 	if(nstring == NULL)
 	{
-		perror("\getfilename->calloc");
+		perror("\ngetfilename->calloc");
 
 		return NULL;
 	}
 
 	if( ( sprintf(nstring, "%lu", number) ) < 0 )	/* Write the number in    */
 	{												/* the string and test if */
-		perror("\getfilename->sprintf");			/* it worked              */
+		perror("\ngetfilename->sprintf");			/* it worked              */
 
 		free(nstring);
 
@@ -208,7 +208,7 @@ char* getfilename(char *firstpart, unsigned long number, char *extension)
 		strcat(filename, extension);
 	}
 	else
-		perror("\getfilename->calloc");
+		perror("\ngetfilename->calloc");
 
 	free(nstring);
 
